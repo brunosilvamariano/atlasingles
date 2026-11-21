@@ -1,0 +1,17 @@
+{
+  "_comment": "IDs de vozes da ElevenLabs. Troque pelos IDs que você escolher em elevenlabs.io (Voices > copiar ID). Cada papel do diálogo usa a voz indicada; papéis não listados alternam entre 'default_a' e 'default_b'.",
+  "model": "eleven_multilingual_v2",
+  "default_a": "21m00Tcm4TlvDq8ikWAM",
+  "default_b": "pNInz6obpgDQGcFmaJgB",
+  "words": "21m00Tcm4TlvDq8ikWAM",
+  "roles": {
+    "Ana": "EXAVITQu4vr4xnSDxMaL",
+    "Amiga": "EXAVITQu4vr4xnSDxMaL",
+    "Vizinha": "MF3mGyEYCl7XYWbV9V6O",
+    "Ben": "TxGEqnHWrfWFTfGW9XWX",
+    "Bruno": "ErXwobaYiN019PkySvjV",
+    "Alex": "pNInz6obpgDQGcFmaJgB",
+    "Criança": "MF3mGyEYCl7XYWbV9V6O",
+    "Responsável": "21m00Tcm4TlvDq8ikWAM"
+  }
+}

@@ -1,0 +1,13 @@
+node_modules/
+.next/
+.vercel/
+.env*
+!.env.example
+*.tsbuildinfo
+!.env.setup.example
+
+.env.audio
+!.env.audio.example
+
+# Cópia dos arquivos antes da revisão de contrações (só local)
+_backup-antes-contracoes/

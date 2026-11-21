@@ -1,0 +1,6 @@
+import { z } from 'zod';
+// Shared schema rejects malformed records before they reach persistent storage.
+export const learnerStateSchema = z.object({ completed: z.array(z.string().max(80)).max(1000), saved: z.array(z.string().max(100)).max(2000), notes: z.array(z.object({ id: z.string().max(80), createdAt: z.string().datetime().optional(), text: z.string().min(1).max(10000), date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/) })).max(500), events: z.array(z.object({ id: z.string().max(80), title: z.string().min(1).max(500), details: z.string().max(10000).optional(), createdAt: z.string().datetime().optional(), time: z.union([z.literal(''), z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/)]).optional(), category: z.enum(['Estudo', 'Revisão', 'Pessoal']).optional(), date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/) })).max(1000), activity: z.record(z.number().int().min(0).max(10000)), goal: z.union([z.literal(5), z.literal(10), z.literal(15), z.literal(20), z.literal(30)]),
+    // Spaced review of saved words: word -> [box, next review date].
+    review: z.record(z.string().max(100), z.tuple([z.number().int().min(0).max(10), z.string().regex(/^\d{4}-\d{2}-\d{2}$/)])).optional() });
+export type LearnerState = z.infer<typeof learnerStateSchema>;

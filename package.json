@@ -1,0 +1,44 @@
+{
+  "name": "atlas-english-bruno",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "dev:local": "node scripts/run-local.mjs",
+    "build": "next build --webpack",
+    "start": "next start",
+    "start:local": "node scripts/run-local.mjs start",
+    "typecheck": "tsc --noEmit",
+    "check:content": "node scripts/check-curriculum.mjs",
+    "check:planning": "node scripts/check-planning.mjs",
+    "admin:create": "node scripts/create-admin.mjs",
+    "audio:generate": "node scripts/generate-audio.mjs"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.118.0",
+    "@twind/core": "^1.1.3",
+    "@twind/preset-tailwind": "^1.1.4",
+    "lucide-react": "1.66.0",
+    "next": "16.3.4",
+    "radix-ui": "^1.6.7",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "react-is": "^19.2.6",
+    "recharts": "3.10.1",
+    "server-only": "^0.0.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "tailwindcss": "4.2.1",
+    "typescript": "5.9.3"
+  }
+}
