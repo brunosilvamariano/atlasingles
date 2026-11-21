@@ -119,13 +119,13 @@ Como alternativa à criação pelo painel, depois de npm ci:
 O ZIP não contém uma senha universal. Antes de configurar seu Supabase não existe uma conta ativa na versão Vercel. O script não modifica a senha de uma conta existente. No site hospedado anterior, o acesso continua pela conta ChatGPT.
 
 
-## Histórias reais · leitura guiada
+## Histórias infantis · leitura guiada
 
-A seção **Histórias reais** reúne cinco acontecimentos verificáveis: Apollo 11, irmãos Wright, Rosa Parks, Apollo 13 e voo 1549 no Rio Hudson. Cada história tem três páginas digitais, com escrita em inglês americano, pronúncia aproximada para brasileiros e tradução em português. As fontes primárias estão no próprio leitor.
+Cinco histórias fictícias e originais para iniciantes: Lily e a bola vermelha, Max e o passarinho, O pequeno jardim de Mia, O dia de chuva de Ben e Lucy e o gatinho perdido. Cada história tem três páginas digitais e 12 trechos, com escrita em inglês americano, pronúncia aproximada para brasileiros e tradução.
 
-- `lib/true-stories.ts`: textos, traduções, pronúncias, fontes e páginas.
-- `components/atlas/TrueStories.tsx`: biblioteca, paginação e controles de leitura.
-- `app/stories.css`: layout responsivo do leitor.
-- `public/audio/stories/`: narrações completas geradas na Epidemic Sound com Annie, voz americana, em inglês e velocidade 1x.
+- `lib/children-stories.ts`: histórias, traduções, pronúncias e páginas.
+- `components/atlas/ChildrenStories.tsx`: biblioteca, leitor e controles.
+- `app/stories.css`: layout responsivo.
+- `public/audio/stories/children/`: cinco narrações geradas na Epidemic Sound com Annie, voz americana, idioma inglês e velocidade de geração 0.9x.
 
-A narração completa usa o MP3 de cada história. Ouvir uma frase ou página usa a voz em inglês do dispositivo, com opção de velocidade reduzida. A grafia da pronúncia é apenas uma aproximação e não substitui o áudio. Os relatos foram adaptados para estudo e não incluem diálogos inventados. As três páginas são etapas de leitura digital, não uma garantia de três folhas impressas.
+A seção infantil usa somente os MP3 da Epidemic Sound para o áudio, sem síntese de voz do navegador. O player lê a história inteira, e a leitura continua ao virar as páginas. Há um controle para diminuir ainda mais a velocidade de reprodução. As histórias históricas anteriores foram substituídas nesta seção. A quantidade de folhas impressas varia com a formatação; o leitor possui três etapas digitais por história.
