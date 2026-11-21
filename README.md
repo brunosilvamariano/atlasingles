@@ -62,7 +62,7 @@ O ADMIN_USER_ID é lido apenas no servidor. Nenhuma senha é incluída no códig
 
     npm run dev
 
-Abra o endereço mostrado pelo terminal. Entre com a conta criada no Supabase. Se as variáveis estiverem vazias, a tela mostra que a configuração está pendente e o app não libera dados.
+Abra o endereço mostrado pelo terminal. Entre com a conta criada no Supabase. Enquanto faltar qualquer uma dessas três variáveis, o app abre sem login e salva os estudos somente no navegador. Quando as três estiverem configuradas, o acesso privado com Supabase volta automaticamente no próximo deploy. O progresso local não é migrado automaticamente para a conta.
 
 ## 3. Publique na Vercel
 1. Envie os arquivos do projeto para o GitHub, incluindo `public/fonts`, `public/images` e `package-lock.json`. Se o repositório já existir, aplique as alterações a um clone dele para preservar o histórico.
@@ -70,7 +70,7 @@ Abra o endereço mostrado pelo terminal. Entre com a conta criada no Supabase. S
 3. No painel da Vercel, configure as três variáveis de `.env.example` no ambiente Production. Se já usa o Supabase com este app, reutilize o mesmo projeto e o mesmo UUID do administrador para acessar seu histórico. Guarde as credenciais locais em arquivos ignorados pelo Git.
 4. Publique pela branch de produção configurada na Vercel, normalmente `main`. Depois de vincular o GitHub, cada push nessa branch dispara um novo deploy de produção. Alterações nas variáveis entram em vigor no próximo deploy.
 
-O `.gitignore` exclui `node_modules`, `.next`, `.vercel` e os arquivos `.env` com valores locais. A versão hospedada usa login e sincronização pelo Supabase.
+O `.gitignore` exclui `node_modules`, `.next`, `.vercel` e os arquivos `.env` com valores locais. A versão hospedada abre sem login enquanto o Supabase não estiver configurado. Nesse modo, progresso, vocabulário e anotações ficam separados em cada navegador. Quando as três variáveis estiverem presentes, o app exige login e sincroniza pela conta Supabase. As rotas de dados privados continuam exigindo autenticação em ambos os modos.
 
 ## Organização
 - app/: páginas, login, saída e API protegida.
@@ -117,3 +117,4 @@ Como alternativa à criação pelo painel, depois de npm ci:
 4. Configure o ADMIN_USER_ID mostrado em .env.local e no painel da Vercel. A chave administrativa não é necessária para o app funcionar e não deve ser adicionada à Vercel nem ao repositório.
 
 O ZIP não contém uma senha universal. Antes de configurar seu Supabase não existe uma conta ativa na versão Vercel. O script não modifica a senha de uma conta existente. No site hospedado anterior, o acesso continua pela conta ChatGPT.
+
