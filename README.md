@@ -118,3 +118,14 @@ Como alternativa à criação pelo painel, depois de npm ci:
 
 O ZIP não contém uma senha universal. Antes de configurar seu Supabase não existe uma conta ativa na versão Vercel. O script não modifica a senha de uma conta existente. No site hospedado anterior, o acesso continua pela conta ChatGPT.
 
+
+## Histórias reais · leitura guiada
+
+A seção **Histórias reais** reúne cinco acontecimentos verificáveis: Apollo 11, irmãos Wright, Rosa Parks, Apollo 13 e voo 1549 no Rio Hudson. Cada história tem três páginas digitais, com escrita em inglês americano, pronúncia aproximada para brasileiros e tradução em português. As fontes primárias estão no próprio leitor.
+
+- `lib/true-stories.ts`: textos, traduções, pronúncias, fontes e páginas.
+- `components/atlas/TrueStories.tsx`: biblioteca, paginação e controles de leitura.
+- `app/stories.css`: layout responsivo do leitor.
+- `public/audio/stories/`: narrações completas geradas na Epidemic Sound com Annie, voz americana, em inglês e velocidade 1x.
+
+A narração completa usa o MP3 de cada história. Ouvir uma frase ou página usa a voz em inglês do dispositivo, com opção de velocidade reduzida. A grafia da pronúncia é apenas uma aproximação e não substitui o áudio. Os relatos foram adaptados para estudo e não incluem diálogos inventados. As três páginas são etapas de leitura digital, não uma garantia de três folhas impressas.
